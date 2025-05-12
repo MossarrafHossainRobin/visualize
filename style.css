@@ -172,24 +172,27 @@ canvas#signalCanvas {
 }
 
 /* Make transmission line colors brighter */
+/* Updated signal line with a deeper red-orange */
 .signal-line {
-    stroke: var(--danger-color); /* Use a bright color like red-orange */
+    stroke: var(--danger-color); /* Keep the bright color for contrast */
     stroke-width: 3px;
 }
 
-/* Optional: Add glowing pulse effect */
+/* Deepen the color for glowing pulse effect */
 .signal-pulse {
     animation: pulse-glow 1s ease-in-out infinite;
 }
 
+/* Update glow effect with stronger intensity */
 @keyframes pulse-glow {
     0% {
-        box-shadow: 0 0 8px var(--accent-color);
+        box-shadow: 0 0 10px var(--danger-color); /* More intense initial glow */
     }
     50% {
-        box-shadow: 0 0 20px var(--accent-color);
+        box-shadow: 0 0 30px var(--danger-color); /* More prominent glow in the middle of animation */
     }
     100% {
-        box-shadow: 0 0 8px var(--accent-color);
+        box-shadow: 0 0 10px var(--danger-color); /* Reduce glow intensity towards the end */
     }
 }
+
